@@ -1,4 +1,4 @@
-package br.gamesapp.principal_android.util.email;
+package br.gamesapp.principal_android.util;
 
 import android.app.ProgressDialog;
 import android.content.Context;

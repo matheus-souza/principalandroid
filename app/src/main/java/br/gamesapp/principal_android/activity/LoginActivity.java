@@ -1,14 +1,9 @@
-package br.gamesapp.principal_android;
+package br.gamesapp.principal_android.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +16,7 @@ import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
 import java.util.List;
 
+import br.gamesapp.principal_android.R;
 import br.gamesapp.principal_android.activity.cadastro.EmailActivity;
 
 public class LoginActivity extends AppCompatActivity implements Validator.ValidationListener {
@@ -30,7 +26,8 @@ public class LoginActivity extends AppCompatActivity implements Validator.Valida
     @NotEmpty(message = "Peencha este campo")
     private EditText edtSenha;
     private ActionProcessButton btnEntrar;
-    private TextView tvCadastrar;
+    private ActionProcessButton btnCadastrar;
+    private TextView tvRecuperaSenha;
 
     //private MyApplication myApplication;
 
@@ -46,10 +43,18 @@ public class LoginActivity extends AppCompatActivity implements Validator.Valida
 
         edtEmail = (EditText) findViewById(R.id.edt_email_login);
         edtSenha = (EditText) findViewById(R.id.edt_senha_login);
-        tvCadastrar = (TextView) findViewById(R.id.tv_cadastrar_login);
+        btnCadastrar = (ActionProcessButton) findViewById(R.id.btn_cadastrar_login);
         btnEntrar = (ActionProcessButton) findViewById(R.id.btn_entrar_login);
+        tvRecuperaSenha = (TextView) findViewById(R.id.tv_recuperar_login);
 
-        tvCadastrar.setOnClickListener(new View.OnClickListener() {
+        tvRecuperaSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Faz as coisas pra recuperar
+            }
+        });
+
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, EmailActivity.class));
