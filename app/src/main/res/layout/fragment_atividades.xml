@@ -4,9 +4,10 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_atividades"
+        android:id="@+id/rv_fragmetatividades"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:clipToPadding="false" />
 </LinearLayout>

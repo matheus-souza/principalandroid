@@ -1,4 +1,4 @@
-package entidades.atividade;
+package br.gamesapp.principal_android.entidades.atividade;
 
 import java.io.Serializable;
 

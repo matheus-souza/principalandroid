@@ -12,6 +12,6 @@ import br.gamesapp.principal_android.entidades.turma.Turma;
 
 public interface TurmaService {
 
-    @GET("Turma/get/todas)")
+    @GET("Turma/get/todas")
     Call<ArrayList<Turma>> getTurmas();
 }

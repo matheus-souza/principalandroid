@@ -1,4 +1,4 @@
-package entidades.pessoa;
+package br.gamesapp.principal_android.entidades.pessoa;
 
 import java.io.Serializable;
 

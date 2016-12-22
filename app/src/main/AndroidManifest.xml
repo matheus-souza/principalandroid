@@ -5,13 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,6 +24,34 @@
         <activity
             android:name=".activity.cadastro.EmailActivity"
             android:label="@string/title_activity_email"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.cadastro.CodConfirmacaoActivity"
+            android:label="@string/title_activity_cod_confirmacao"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.cadastro.DadosGeraisActivity"
+            android:label="@string/title_activity_dados_gerais"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DadosAtividadeActivity"
+            android:label="@string/title_activity_dados_atividade"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.TabelaActivity"
+            android:label="@string/title_activity_tabela"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AlteraSenhaActivity"
+            android:label="@string/title_activity_altera_senha"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.InformacoesActivity"
+            android:label="@string/title_activity_informacoes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

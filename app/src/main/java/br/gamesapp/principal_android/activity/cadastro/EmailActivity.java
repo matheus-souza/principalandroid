@@ -2,8 +2,6 @@ package br.gamesapp.principal_android.activity.cadastro;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -20,7 +18,7 @@ import java.util.List;
 
 import br.gamesapp.principal_android.R;
 import br.gamesapp.principal_android.util.GeraCodConfirmacao;
-import br.gamesapp.principal_android.util.email.SendMail;
+import br.gamesapp.principal_android.util.SendMail;
 
 public class EmailActivity extends AppCompatActivity implements Validator.ValidationListener {
 
@@ -76,7 +74,10 @@ public class EmailActivity extends AppCompatActivity implements Validator.Valida
     public void onValidationSucceeded() {
         sendEmail();
 
-        //Intent intent = new Intent(EmailActivity.this)
+        Intent intent = new Intent(EmailActivity.this, CodConfirmacaoActivity.class);
+        intent.putExtra("email", edtEmail.getText().toString());
+        intent.putExtra("codConfirmacao", codConfirmacao);
+        startActivity(intent);
     }
 
     @Override

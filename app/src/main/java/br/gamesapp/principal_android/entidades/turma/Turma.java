@@ -1,13 +1,14 @@
-package entidades.turma;
+package br.gamesapp.principal_android.entidades.turma;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  *
  * @author matheush
  */
-public class Turma implements Serializable {
+public class Turma implements Serializable, Comparable<Turma> {
     private String id;
     private String nome;
     private int anoInicio;
@@ -84,5 +85,16 @@ public class Turma implements Serializable {
         stringBuilder.append("\nPontos: " + pontos);
         
         return stringBuilder.toString();
+    }
+
+    @Override
+    public int compareTo(Turma turma) {
+        if (this.pontos > turma.getPontos()) {
+            return -1;
+        }
+        if (this.pontos < turma.getPontos()) {
+            return 1;
+        }
+        return 0;
     }
 }

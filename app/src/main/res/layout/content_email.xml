@@ -24,7 +24,8 @@
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_email"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorBlack">
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -32,15 +33,16 @@
                     android:ems="10"
                     android:id="@+id/edt_email_cadastro"
                     android:hint="E-mail" />
-
-                <Button
-                    android:text="Avançar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_avancar_email_cadastro"
-                    android:layout_weight="1" />
             </android.support.design.widget.TextInputLayout>
 
+            <Button
+                android:text="Avançar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/defaultPrimary"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/btn_avancar_email_cadastro"
+                android:layout_weight="1" />
 
         </LinearLayout>
     </ScrollView>
